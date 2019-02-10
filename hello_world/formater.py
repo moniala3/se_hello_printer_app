@@ -5,7 +5,7 @@ PLAIN_LO = "plain_lowercase"
 JSON = "json"
 XML = "xml"
 
-SUPPORTED = [PLAIN, PLAIN_UP, PLAIN_LO, JSON]
+SUPPORTED = [PLAIN, PLAIN_UP, PLAIN_LO, JSON, XML]
 
 
 def get_formatted(msg, imie, format):
@@ -41,5 +41,4 @@ def plain_text_lower_case(msg, imie):
 
 
 def format_to_xml(msg, imie):
-    return ('{ "imie":"' + imie + '", "mgs":' +
-            msg + '"}')
+    return  ('<greetings><name>' + imie + '</name><msg>' + msg + '</msg></greetings>')
