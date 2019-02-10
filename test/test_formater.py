@@ -4,7 +4,15 @@ import unittest
 
 class TestFormater(unittest.TestCase):
     def test_plain_lowercase(self):
-        r = plain_text_upper_case("WWIMIE", "EEEMSG")
+        r = plain_text_lower_case("malwa", 222.00)
+        name = r.split(" ")[0]
+        msg = r.split(" ")[1]
+        self.assertTrue(name.isupper())
+        self.assertTrue(msg.isupper())
+
+class TestFormater(unittest.TestCase):
+    def test_plain_uppercase(self):
+        r = plain_text_upper_case("ala", "MONIKA")
         name = r.split(" ")[0]
         msg = r.split(" ")[1]
         self.assertTrue(name.isupper())
